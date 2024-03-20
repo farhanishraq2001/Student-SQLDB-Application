@@ -7,6 +7,7 @@ const port = 3000;
 //Middleware used to parse json data
 app.use(express.json());
 
+//Everything runs at localhost:3000/students
 app.use('/students', studentRoutes);
 
 //Serve static resources from the public directory
