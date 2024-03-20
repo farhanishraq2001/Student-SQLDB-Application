@@ -1,3 +1,5 @@
+// Predefined SQL queries with to be used in the controller.js
+// Variables (e.g., $1) are passed in as parametes from controller.js
 const getAllStudents = "SELECT * FROM students ORDER BY student_id";
 const getStudentByEmail = "SELECT * FROM students WHERE email = $1";
 const addStudent = "INSERT INTO students (first_name, last_name, email, enrollment_date) VALUES ($1, $2, $3, $4)";

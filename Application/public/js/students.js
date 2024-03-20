@@ -1,7 +1,8 @@
 var students = null;
-
+//Initialize the page on load
 window.addEventListener('load', initializePage);
 
+//Intializaes page with event listners
 function initializePage(){
     let showStudents = document.getElementById("btnShowStudents");
     
@@ -26,7 +27,7 @@ function initializePage(){
     showStudents.addEventListener('click', getAllStudents);
 }
 
-// Gets all the students
+// Gets all the students by making a GET request to the REST api created
 function getAllStudents(){
     fetch('http://localhost:3000/students/', {
         method: 'GET',
@@ -101,7 +102,7 @@ function populateStudents(students) {
     }
 }
 
-// Adds to student DB
+// Adds to student DB by making a POST request to the REST api created
 function addStudentSubmit(e) {
     e.preventDefault();
     
@@ -147,7 +148,7 @@ function addStudentSubmit(e) {
     }
 }
 
-// Changes student email
+// Changes student email by making a PUT request to the REST api created
 function emailChangeSubmit(e) {
     e.preventDefault();
 
@@ -190,7 +191,7 @@ function emailChangeSubmit(e) {
     console.log(student_id + " " +email);
 }
 
-// Deletes student from DB
+// Deletes student from DB by making a DELETE request to the REST api created
 function deleteStudent(studentId) {
     console.log(studentId);
 

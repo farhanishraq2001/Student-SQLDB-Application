@@ -3,6 +3,8 @@ const queries = require('../queries/queries');
 const path = require('path');
 const fs = require("fs");
 
+// URL handlers
+// URL hanlder to retrieve all the students from the DB
 const getAllStudents = async (req, res) => {
     let htmlFile = path.join(__dirname + '../../../public/'+ 'index.html');
 
@@ -26,7 +28,7 @@ const getAllStudents = async (req, res) => {
         }
     }    
 }
-
+// URL hanlder to add a student to the DB
 const addStudent = async (req, res) => {
     const {first_name, last_name, email, enrollment_date} = req.body;
     //Check if attributes are missing from request body
@@ -37,14 +39,14 @@ const addStudent = async (req, res) => {
     
     try {
         // Check if student with same email exists 
-        const { rows } = await pool.query(queries.getStudentByEmail, [email]);
+        const { rows } = await pool.query(queries.getStudentByEmail, [email]);// email parameter passed in
         // Send bad response if student with same email exists 
         if (rows.length > 0) {
             res.status(409).json({message: 'ERROR 409: Given email already exists.'});
             return;
         }
         // Perform the add operation
-        await pool.query(queries.addStudent, [first_name, last_name, email, enrollment_date]);
+        await pool.query(queries.addStudent, [first_name, last_name, email, enrollment_date]); // first_name, last_name, email, enrollment_date parameter passed in
         // Send a success response
         res.status(201).json({message: 'Student successfully added'});
     } catch (err) {
@@ -80,14 +82,14 @@ const addStudent = async (req, res) => {
         }
     }
 }
-
+// URL hanlder to update a student's email in the DB
 const updateStudentEmail = async (req, res) => {
     const id = parseInt(req.params.id);
     const { email } = req.body;
 
     try {
         // Perform the update operation
-        const result = await pool.query(queries.updateStudentEmail, [email, id]);
+        const result = await pool.query(queries.updateStudentEmail, [email, id]);// email and student_id parameter passed in 
         console.log(result);
         // Check if the update was successful
         if (result.rowCount < 1) {
@@ -118,13 +120,13 @@ const updateStudentEmail = async (req, res) => {
         }
     }
 }
-
+// URL hanlder to delete a student from the DB
 const deleteStudent = async (req, res) => {
     const id = parseInt(req.params.id);
 
     try {
         // Perform the delete operation
-        const result = await pool.query(queries.deleteStudent, [id]);
+        const result = await pool.query(queries.deleteStudent, [id]);// student_id parameter passed in
         console.log(result);
         // Check if the delete was successful
         if (result.rowCount < 1) {
