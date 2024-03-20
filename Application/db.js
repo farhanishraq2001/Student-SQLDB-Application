@@ -6,6 +6,7 @@ require('dotenv').config({
 
 const Pool  = require('pg').Pool;
 
+// Creates a new Pool using DB configurations found in the dev.env file
 const pool = new Pool({
     user: process.env.USER,
     host: process.env.HOST,
@@ -13,5 +14,5 @@ const pool = new Pool({
     password: process.env.PASSWORD,
     port: process.env.PORT
 });
-
+// This pool is exported to be used in controller.js for querying the DB
 module.exports = pool;
