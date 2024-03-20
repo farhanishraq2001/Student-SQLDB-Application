@@ -13,4 +13,4 @@ app.use('/students', studentRoutes);
 //Serve static resources from the public directory
 app.use(express.static("public"));
 
-app.listen(port, () => console.log(`Server running at localhost:${port}`));
+app.listen(port, () => console.log(`Server running at localhost:${port}/students`));
