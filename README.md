@@ -18,9 +18,9 @@ Run instructions:
   2) In your desired folder, open git bash and run the following command:
         git clone https://github.com/farhanishraq2001/Student-SQLDB-Application.git
   3) Inside the Application folder change the following in the dev.env file and hit save
-        DATABASE=<Your database>
-        PASSWORD=<Password to your database>
-        PORT=<Port your PostgreSQL databse is running on. default is 5432>
+        DATABASE="Your database"
+        PASSWORD="Password to your database"
+        PORT="Port your PostgreSQL databse is running on. default is 5432"
   5) While having pgAdmin4 open, go to the Application folder (can open it in VSCode integrated terminal), type
      node server.js in the terminal and hit enter on your keyboard
   6) Now the server should be running at localhose:3000/students
