@@ -32,7 +32,7 @@ const getAllStudents = async (req, res) => {
 const addStudent = async (req, res) => {
     const {first_name, last_name, email, enrollment_date} = req.body;
     //Check if attributes are missing from request body
-    if ((first_name && last_name && email && enrollment_date) == null || undefined) {
+    if ((first_name && last_name && email) == null || undefined) {
         res.status(422).json({message: 'ERROR 422: Missing required attribute. Please provide all required attributes.'});
         return;
     }
