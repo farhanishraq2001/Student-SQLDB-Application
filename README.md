@@ -1,7 +1,9 @@
 Required softwares: _For all the software bellow go through the setup process with default/preselected settings_
   
   PostgreSQL/pgAdmin4: https://www.postgresql.org/download/
+  
   node.js : https://nodejs.org/en
+  
   Git     : https://git-scm.com/downloads 
 
 Folders:  
