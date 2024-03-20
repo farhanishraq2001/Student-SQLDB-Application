@@ -24,7 +24,7 @@ Run instructions:
         PORT="Port your PostgreSQL databse is running on. default is 5432"
   5) While having pgAdmin4 open, open the Student-SQLDB-Application folder in the VSCode, then open the Application folder integrated terminal and then type node server.js and hit enter as shown in the video
      You can do this step using other terminals as well, you just have to make sure to be in the ..\Student-SQLDB-Application\Application directory
-  6) Now the server should be running at localhose:3000/students
+  6) Now the server should be running at localhost:3000/students
      You can now interact with the server to view, add, update, and delete student(s) from/to the students table
   7) To end the server, simply head back to the terminal where you typed node server.js. Here hold control + c (for Windows)
      or command + c (for Mac) on your keyboard
