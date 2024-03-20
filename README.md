@@ -24,5 +24,7 @@ Run instructions:
   5) While having pgAdmin4 open, go to the Application folder (can open it in VSCode integrated terminal), type
      node server.js in the terminal and hit enter on your keyboard
   6) Now the server should be running at localhose:3000/students
-     You can now interact with the server to view, add, update, and delete student(s)
+     You can now interact with the server to view, add, update, and delete student(s) from/to the students table
+  7) To end the server, simply head back to the terminal where you typed node server.js. Here hold control + c (for Windows)
+     or command + c (for Mac) on your keyboard
 
