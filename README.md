@@ -17,7 +17,7 @@ Run instructions:
   1) Have a students table created in the SQL DB using the DDL file and populate it using the DML file
   2) In your desired folder, open git bash and run the following command:
         git clone https://github.com/farhanishraq2001/Student-SQLDB-Application.git
-  3) Inside the Application folder change the following in the dev.env file and hit save
+  3) Inside the Application folder change the dev.env file appropriately and hit save. The following are perhaps the most important changes:
         DATABASE="Your database"
         PASSWORD="Password to your database"
         PORT="Port your PostgreSQL databse is running on. default is 5432"
