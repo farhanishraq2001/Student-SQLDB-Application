@@ -6,9 +6,12 @@ Required softwares: _For all the software bellow go through the setup process wi
   
   Git     : https://git-scm.com/downloads 
 
+
 Folders:  
   Application: Contains the files for the CRUD web application utilizing REST API to query the PostgreSQL DB
+  
   SQL        : Contains the DDL and DML files to setup the student table
+
 
 Run instructions:
   1) Have a students table created in the SQL DB using the DDL file and populate it using the DML file
