@@ -28,3 +28,4 @@ Run instructions:
   7) To end the server, simply head back to the terminal where you typed node server.js. Here hold control + c (for Windows)
      or command + c (for Mac) on your keyboard
 
+Video Demo showcasing the application being run: https://www.youtube.com/watch?v=EUGnOjKTpN0
